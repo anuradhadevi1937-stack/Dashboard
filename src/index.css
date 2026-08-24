@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #F8FAFC;
+    color: #0F172A;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F1F5F9;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+/* Dark Navy Card Aesthetics */
+.navy-card {
+  background-color: #0F172A;
+  border: 1px solid #1E293B;
+  border-radius: 1.25rem;
+  box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.2), 0 8px 10px -6px rgba(15, 23, 42, 0.1);
+  color: #F8FAFC;
+  transition: all 0.2s ease-in-out;
+}
+
+.navy-card-hover:hover {
+  border-color: #334155;
+  box-shadow: 0 15px 30px -5px rgba(15, 23, 42, 0.3), 0 0 20px rgba(255, 107, 0, 0.08);
+}
+
+.navy-card-inner {
+  background-color: #1E293B;
+  border: 1px solid #334155;
+  border-radius: 0.875rem;
+}
+
+/* White / Light Card */
+.white-card {
+  background-color: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 1.25rem;
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.03), 0 2px 6px -1px rgba(0, 0, 0, 0.02);
+}
+
+/* Orange Glow */
+.orange-glow {
+  box-shadow: 0 0 20px rgba(255, 107, 0, 0.3);
+}
+
+/* Numeric Mono */
+.font-numeric {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Pulse indicator */
+@keyframes live-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.85); }
+}
+
+.animate-live-pulse {
+  animation: live-pulse 2s infinite ease-in-out;
+}
