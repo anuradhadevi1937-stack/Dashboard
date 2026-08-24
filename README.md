@@ -24,8 +24,8 @@ A modern, high-performance sales analytics dashboard built with **React**, **Typ
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/anuragsingh0412/voyx-admin-dashboard.git
-cd voyx-admin-dashboard
+git clone https://github.com/anuradhadevi1937-stack/Dashboard.git
+cd Dashboard
 ```
 
 ### 2. Install dependencies
@@ -50,4 +50,4 @@ Open [http://localhost:5173](http://localhost:5173) in your browser.
 ## 👤 Author
 
 **Anuradha**
-- GitHub: [@anuragsingh0412](https://github.com/anuragsingh0412)
+- GitHub: [@anuradhadevi1937-stack](https://github.com/anuradhadevi1937-stack)
