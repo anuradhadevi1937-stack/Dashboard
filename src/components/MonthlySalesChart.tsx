@@ -30,7 +30,7 @@ export const MonthlySalesChart: React.FC<MonthlySalesChartProps> = ({ data }) =>
       {/* Header */}
       <div className="flex items-center justify-between mb-6">
         <div className="flex items-center gap-2">
-          <div className="w-8 h-8 rounded-lg bg-indigo-500/15 text-indigo-400 flex items-center justify-center">
+          <div className="w-8 h-8 rounded-lg bg-teal-500/15 text-teal-400 flex items-center justify-center">
             <CalendarRange size={18} />
           </div>
           <div>
@@ -44,7 +44,7 @@ export const MonthlySalesChart: React.FC<MonthlySalesChartProps> = ({ data }) =>
         </div>
         <div className="text-right hidden sm:block">
           <span className="text-[11px] text-slate-400 block">Total Historical</span>
-          <span className="text-sm font-extrabold text-indigo-400 font-numeric">
+          <span className="text-sm font-extrabold text-teal-400 font-numeric">
             ₹{totalHistoricalRevenue.toLocaleString('en-IN', { maximumFractionDigits: 0 })}
           </span>
         </div>
@@ -80,7 +80,7 @@ export const MonthlySalesChart: React.FC<MonthlySalesChartProps> = ({ data }) =>
                   return (
                     <div className="bg-slate-900 border border-slate-700 p-3 rounded-xl shadow-xl text-xs space-y-1.5">
                       <div className="font-bold text-slate-200 border-b border-slate-800 pb-1">{label}</div>
-                      <div className="flex items-center justify-between gap-4 text-indigo-400 font-bold">
+                      <div className="flex items-center justify-between gap-4 text-teal-400 font-bold">
                         <span>Net Revenue:</span>
                         <span className="font-mono">₹{rev.toLocaleString('en-IN')}</span>
                       </div>
@@ -99,7 +99,7 @@ export const MonthlySalesChart: React.FC<MonthlySalesChartProps> = ({ data }) =>
               {data.map((_, index) => (
                 <Cell 
                   key={`cell-${index}`} 
-                  fill={index === data.length - 1 ? '#FF6B00' : '#6366F1'} 
+                  fill={index === data.length - 1 ? '#2DD4BF' : '#0D9488'} 
                 />
               ))}
             </Bar>

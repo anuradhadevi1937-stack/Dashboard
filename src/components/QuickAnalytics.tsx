@@ -30,7 +30,7 @@ export const QuickAnalytics: React.FC<QuickAnalyticsProps> = ({ data, periodLabe
       {/* 1. Best-Selling Product */}
       <div className="navy-card p-5 relative overflow-hidden">
         <div className="flex items-center gap-2 mb-3">
-          <div className="w-7 h-7 rounded-lg bg-orange-500/15 text-voyx-orange flex items-center justify-center">
+          <div className="w-7 h-7 rounded-lg bg-teal-500/15 text-teal-400 flex items-center justify-center">
             <Package size={15} />
           </div>
           <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400">
@@ -44,7 +44,7 @@ export const QuickAnalytics: React.FC<QuickAnalyticsProps> = ({ data, periodLabe
               {data.topProduct.name}
             </h4>
             <div className="flex items-baseline gap-2 mt-2">
-              <span className="font-mono font-extrabold text-base text-voyx-orange">
+              <span className="font-mono font-extrabold text-base text-teal-400">
                 {formatINR(data.topProduct.revenue)}
               </span>
               <span className="text-[11px] text-slate-400 font-medium">
@@ -60,7 +60,7 @@ export const QuickAnalytics: React.FC<QuickAnalyticsProps> = ({ data, periodLabe
       {/* 2. Top Customer */}
       <div className="navy-card p-5 relative overflow-hidden">
         <div className="flex items-center gap-2 mb-3">
-          <div className="w-7 h-7 rounded-lg bg-indigo-500/15 text-indigo-400 flex items-center justify-center">
+          <div className="w-7 h-7 rounded-lg bg-emerald-500/15 text-emerald-400 flex items-center justify-center">
             <User size={15} />
           </div>
           <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400">
@@ -109,12 +109,12 @@ export const QuickAnalytics: React.FC<QuickAnalyticsProps> = ({ data, periodLabe
 
           <div className="w-full bg-slate-800 rounded-full h-2 overflow-hidden flex">
             <div 
-              className="bg-voyx-orange h-full" 
+              className="bg-teal-500 h-full" 
               style={{ width: `${esimPct}%` }} 
               title={`eSIM: ${esimPct}%`}
             />
             <div 
-              className="bg-cyan-500 h-full" 
+              className="bg-cyan-400 h-full" 
               style={{ width: `${plasticPct}%` }} 
               title={`Plastic: ${plasticPct}%`}
             />
@@ -130,7 +130,7 @@ export const QuickAnalytics: React.FC<QuickAnalyticsProps> = ({ data, periodLabe
       {/* 4. Lifetime Database Overview */}
       <div className="navy-card p-5 relative overflow-hidden">
         <div className="flex items-center gap-2 mb-3">
-          <div className="w-7 h-7 rounded-lg bg-emerald-500/15 text-emerald-400 flex items-center justify-center">
+          <div className="w-7 h-7 rounded-lg bg-teal-500/15 text-teal-400 flex items-center justify-center">
             <Database size={15} />
           </div>
           <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400">
@@ -145,11 +145,11 @@ export const QuickAnalytics: React.FC<QuickAnalyticsProps> = ({ data, periodLabe
           </div>
           <div className="p-1.5 rounded-lg bg-slate-900/60 border border-slate-800">
             <span className="text-[10px] text-slate-400 block">Total Orders</span>
-            <span className="font-mono font-bold text-voyx-orange text-xs mt-0.5 block">2,831</span>
+            <span className="font-mono font-bold text-teal-400 text-xs mt-0.5 block">2,831</span>
           </div>
           <div className="p-1.5 rounded-lg bg-slate-900/60 border border-slate-800">
             <span className="text-[10px] text-slate-400 block">Sales Team</span>
-            <span className="font-mono font-bold text-cyan-400 text-xs mt-0.5 block">14 Reps</span>
+            <span className="font-mono font-bold text-emerald-400 text-xs mt-0.5 block">14 Reps</span>
           </div>
         </div>
       </div>

@@ -34,7 +34,7 @@ export const DailySalesChart: React.FC<DailySalesChartProps> = ({ data, periodLa
       <div className="flex items-center justify-between gap-4 mb-6 flex-wrap">
         <div>
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg bg-orange-500/15 text-voyx-orange flex items-center justify-center">
+            <div className="w-8 h-8 rounded-lg bg-teal-500/15 text-teal-400 flex items-center justify-center">
               <TrendingUp size={18} />
             </div>
             <h3 className="text-base font-bold text-white tracking-tight">
@@ -51,7 +51,7 @@ export const DailySalesChart: React.FC<DailySalesChartProps> = ({ data, periodLa
           <button
             onClick={() => setViewMode('combined')}
             className={`px-3 py-1.5 rounded-lg transition-all ${
-              viewMode === 'combined' ? 'bg-voyx-orange text-white shadow-sm' : 'text-slate-400 hover:text-white'
+              viewMode === 'combined' ? 'bg-teal-500 text-slate-950 font-bold shadow-sm' : 'text-slate-400 hover:text-white'
             }`}
           >
             Combined
@@ -59,7 +59,7 @@ export const DailySalesChart: React.FC<DailySalesChartProps> = ({ data, periodLa
           <button
             onClick={() => setViewMode('revenue')}
             className={`px-3 py-1.5 rounded-lg transition-all ${
-              viewMode === 'revenue' ? 'bg-indigo-600 text-white shadow-sm' : 'text-slate-400 hover:text-white'
+              viewMode === 'revenue' ? 'bg-teal-600 text-white font-bold shadow-sm' : 'text-slate-400 hover:text-white'
             }`}
           >
             Revenue (₹)
@@ -67,7 +67,7 @@ export const DailySalesChart: React.FC<DailySalesChartProps> = ({ data, periodLa
           <button
             onClick={() => setViewMode('orders')}
             className={`px-3 py-1.5 rounded-lg transition-all ${
-              viewMode === 'orders' ? 'bg-cyan-600 text-white shadow-sm' : 'text-slate-400 hover:text-white'
+              viewMode === 'orders' ? 'bg-cyan-500 text-slate-950 font-bold shadow-sm' : 'text-slate-400 hover:text-white'
             }`}
           >
             Orders
@@ -86,11 +86,11 @@ export const DailySalesChart: React.FC<DailySalesChartProps> = ({ data, periodLa
             <AreaChart data={data} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
               <defs>
                 <linearGradient id="colorRevenue" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="5%" stopColor="#FF6B00" stopOpacity={0.4} />
-                  <stop offset="95%" stopColor="#FF6B00" stopOpacity={0.0} />
+                  <stop offset="5%" stopColor="#14B8A6" stopOpacity={0.45} />
+                  <stop offset="95%" stopColor="#14B8A6" stopOpacity={0.0} />
                 </linearGradient>
                 <linearGradient id="colorOrders" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="5%" stopColor="#06B6D4" stopOpacity={0.3} />
+                  <stop offset="5%" stopColor="#06B6D4" stopOpacity={0.35} />
                   <stop offset="95%" stopColor="#06B6D4" stopOpacity={0.0} />
                 </linearGradient>
               </defs>
@@ -133,7 +133,7 @@ export const DailySalesChart: React.FC<DailySalesChartProps> = ({ data, periodLa
                     return (
                       <div className="bg-slate-900 border border-slate-700 p-3 rounded-xl shadow-xl text-xs space-y-1.5">
                         <div className="font-bold text-slate-200 border-b border-slate-800 pb-1">{label}</div>
-                        <div className="flex items-center justify-between gap-4 text-voyx-orange font-bold">
+                        <div className="flex items-center justify-between gap-4 text-teal-400 font-bold">
                           <span>Revenue:</span>
                           <span className="font-mono">₹{rev.toLocaleString('en-IN')}</span>
                         </div>
@@ -154,7 +154,7 @@ export const DailySalesChart: React.FC<DailySalesChartProps> = ({ data, periodLa
                   type="monotone" 
                   dataKey="revenue" 
                   name="Revenue (₹)"
-                  stroke="#FF6B00" 
+                  stroke="#2DD4BF" 
                   strokeWidth={2.5}
                   fillOpacity={1} 
                   fill="url(#colorRevenue)" 
@@ -167,7 +167,7 @@ export const DailySalesChart: React.FC<DailySalesChartProps> = ({ data, periodLa
                   type="monotone" 
                   dataKey="orders" 
                   name="Orders"
-                  stroke="#06B6D4" 
+                  stroke="#22D3EE" 
                   strokeWidth={2}
                   fillOpacity={1} 
                   fill="url(#colorOrders)" 

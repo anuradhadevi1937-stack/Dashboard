@@ -113,7 +113,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-900 flex flex-col font-sans">
+    <div className="min-h-screen bg-gradient-to-br from-black via-zinc-950 to-neutral-900 text-slate-100 flex flex-col font-sans">
       {/* Header */}
       <Header
         dateRange={dateRange}
@@ -126,8 +126,8 @@ export default function App() {
 
       {/* Top Loading Progress Bar */}
       {loading && (
-        <div className="w-full bg-orange-100 h-1 overflow-hidden">
-          <div className="bg-voyx-orange h-full animate-pulse w-full" />
+        <div className="w-full bg-teal-950/60 h-1 overflow-hidden">
+          <div className="bg-teal-500 h-full animate-pulse w-full shadow-lg shadow-teal-500/50" />
         </div>
       )}
 
@@ -135,16 +135,16 @@ export default function App() {
       <main className="flex-1 max-w-[1520px] w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-6">
         {/* Error Notice */}
         {error && (
-          <div className="p-4 rounded-2xl bg-rose-50 border border-rose-200 text-rose-700 text-sm flex items-center justify-between shadow-sm">
+          <div className="p-4 rounded-2xl bg-rose-950/40 border border-rose-800/60 text-rose-300 text-sm flex items-center justify-between shadow-sm">
             <div className="flex items-center gap-3">
-              <AlertCircle size={20} className="text-rose-500 flex-shrink-0" />
+              <AlertCircle size={20} className="text-rose-400 flex-shrink-0" />
               <div>
                 <strong>Database Error:</strong> {error}
               </div>
             </div>
             <button 
               onClick={fetchData}
-              className="px-3 py-1.5 bg-rose-100 hover:bg-rose-200 text-rose-800 rounded-xl font-bold text-xs"
+              className="px-3 py-1.5 bg-rose-900/60 hover:bg-rose-800/80 text-rose-200 rounded-xl font-bold text-xs"
             >
               Retry Query
             </button>
@@ -216,7 +216,7 @@ export default function App() {
           <div className="navy-card p-6 overflow-hidden">
             <div className="flex items-center justify-between mb-5 flex-wrap gap-3">
               <div className="flex items-center gap-2">
-                <div className="w-8 h-8 rounded-lg bg-emerald-500/15 text-emerald-400 flex items-center justify-center">
+                <div className="w-8 h-8 rounded-lg bg-teal-500/15 text-teal-400 flex items-center justify-center">
                   <ShoppingBag size={18} />
                 </div>
                 <div>
@@ -231,9 +231,9 @@ export default function App() {
 
               <button
                 onClick={handleExportCSV}
-                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 text-xs font-bold transition-all"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-900/90 hover:bg-slate-800 text-slate-200 border border-slate-700/80 text-xs font-bold transition-all hover:border-teal-500/50"
               >
-                <FileSpreadsheet size={14} className="text-emerald-400" />
+                <FileSpreadsheet size={14} className="text-teal-400" />
                 <span>Export Filtered Table</span>
               </button>
             </div>
@@ -284,8 +284,8 @@ export default function App() {
                             <div className="flex items-center gap-2 mt-1">
                               <span className={`text-[10px] font-extrabold px-1.5 py-0.2 rounded ${
                                 ord.product?.simMode === 2 
-                                  ? 'bg-voyx-orange/20 text-voyx-orange border border-voyx-orange/30' 
-                                  : 'bg-cyan-500/20 text-cyan-400 border border-cyan-500/30'
+                                  ? 'bg-teal-500/20 text-teal-300 border border-teal-500/40' 
+                                  : 'bg-cyan-500/20 text-cyan-300 border border-cyan-500/30'
                               }`}>
                                 {ord.product?.simMode === 2 ? 'eSIM' : 'Plastic SIM'}
                               </span>
@@ -304,7 +304,7 @@ export default function App() {
                         </td>
                         <td className="py-3.5 px-4 whitespace-nowrap">
                           <div className="inline-flex items-center gap-1.5 text-xs text-slate-300">
-                            <UserCheck size={13} className="text-voyx-orange" />
+                            <UserCheck size={13} className="text-teal-400" />
                             <span className="font-medium">{ord.salesperson?.name?.trim() || `Rep #${ord.created_by}`}</span>
                           </div>
                         </td>

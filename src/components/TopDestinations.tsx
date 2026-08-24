@@ -24,7 +24,7 @@ export const TopDestinations: React.FC<TopDestinationsProps> = ({
       {/* Header */}
       <div className="flex items-center justify-between mb-5">
         <div className="flex items-center gap-2">
-          <div className="w-8 h-8 rounded-lg bg-cyan-500/15 text-cyan-400 flex items-center justify-center">
+          <div className="w-8 h-8 rounded-lg bg-teal-500/15 text-teal-400 flex items-center justify-center">
             <Globe size={18} />
           </div>
           <div>
@@ -87,10 +87,10 @@ export const TopDestinations: React.FC<TopDestinationsProps> = ({
                 <div 
                   className={`h-full rounded-full ${
                     idx === 0 
-                      ? 'bg-gradient-to-r from-voyx-orange to-amber-400' 
+                      ? 'bg-gradient-to-r from-teal-500 via-teal-400 to-emerald-400' 
                       : idx === 1
-                      ? 'bg-gradient-to-r from-cyan-400 to-indigo-400'
-                      : 'bg-indigo-500/80'
+                      ? 'bg-gradient-to-r from-cyan-400 to-teal-400'
+                      : 'bg-teal-500/80'
                   }`}
                   style={{ width: `${Math.min(Math.max(dest.sharePct, 4), 100)}%` }}
                 />
@@ -102,7 +102,7 @@ export const TopDestinations: React.FC<TopDestinationsProps> = ({
 
       {/* Footer Notes on Aggregation */}
       <div className="mt-4 pt-3 border-t border-slate-800 text-[10px] text-slate-500 flex items-center gap-1.5">
-        <Compass size={12} className="text-voyx-orange flex-shrink-0" />
+        <Compass size={12} className="text-teal-400 flex-shrink-0" />
         <span>Mapped via product coverage codes to ISO-3 country registry</span>
       </div>
     </div>

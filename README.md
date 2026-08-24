@@ -49,5 +49,5 @@ Open [http://localhost:5173](http://localhost:5173) in your browser.
 
 ## 👤 Author
 
-**Anurag Singh**
+**Anuradha**
 - GitHub: [@anuragsingh0412](https://github.com/anuragsingh0412)

@@ -58,7 +58,7 @@ export const SalesLeaderboard: React.FC<SalesLeaderboardProps> = ({
       {/* Header */}
       <div className="flex items-center justify-between mb-5 flex-wrap gap-3">
         <div className="flex items-center gap-2">
-          <div className="w-8 h-8 rounded-lg bg-orange-500/15 text-voyx-orange flex items-center justify-center">
+          <div className="w-8 h-8 rounded-lg bg-teal-500/15 text-teal-400 flex items-center justify-center">
             <Trophy size={18} />
           </div>
           <div>
@@ -72,7 +72,7 @@ export const SalesLeaderboard: React.FC<SalesLeaderboardProps> = ({
         </div>
 
         <div className="flex items-center gap-2 text-[11px] text-slate-400 bg-slate-900/80 px-3 py-1.5 rounded-xl border border-slate-800">
-          <span className="w-2 h-2 rounded-full bg-voyx-orange" />
+          <span className="w-2 h-2 rounded-full bg-teal-400" />
           <span>Active Reps: {leaderboard.filter(r => r.periodOrders > 0).length} of {leaderboard.length}</span>
         </div>
       </div>
@@ -120,9 +120,9 @@ export const SalesLeaderboard: React.FC<SalesLeaderboardProps> = ({
                     <div className="flex items-center gap-3">
                       <div className={`w-8 h-8 rounded-xl flex items-center justify-center font-bold text-xs shadow-sm ${
                         rep.rank === 1 
-                          ? 'bg-gradient-to-tr from-voyx-orange to-amber-500 text-white' 
+                          ? 'bg-gradient-to-tr from-teal-400 to-emerald-500 text-slate-950 shadow-teal-500/25' 
                           : rep.rank === 2
-                          ? 'bg-gradient-to-tr from-indigo-500 to-indigo-700 text-white'
+                          ? 'bg-gradient-to-tr from-cyan-400 to-teal-500 text-slate-950 shadow-cyan-500/20'
                           : 'bg-slate-800 text-slate-300 border border-slate-700'
                       }`}>
                         {rep.name.charAt(0).toUpperCase()}
